@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d6b5b">
+  <title>زاد | اختبر معرفتك الإسلامية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="زاد - الرئيسية">
+        <span class="brand-mark">ز</span>
+        <span>
+          <strong>زاد</strong>
+          <small>للمعرفة الإسلامية</small>
+        </span>
+      </a>
+      <div class="topbar-note"><span class="online-dot"></span> تعلّم، اختبر، وارتقِ</div>
+    </header>
+
+    <main>
+      <section class="hero" id="setup-view">
+        <div class="hero-copy">
+          <p class="eyebrow"><span>✦</span> رحلة معرفة قصيرة</p>
+          <h1>اكتشف ما تعرفه،<br><em>وزِد ما تتعلمه.</em></h1>
+          <p class="hero-text">اختبار إسلامي ممتع في القرآن والسيرة والعقيدة، صُمّم ليمنحك معرفة جديدة في دقائق.</p>
+          <div class="hero-meta">
+            <span><b>7</b> أسئلة</span>
+            <span class="meta-divider"></span>
+            <span><b>3</b> مستويات</span>
+            <span class="meta-divider"></span>
+            <span><b>∞</b> تعلّم</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="arch-glow"></div>
+          <div class="arch">
+            <div class="arch-inner">
+              <span class="verse-mark">۞</span>
+              <span class="arch-line"></span>
+              <span class="arch-stars">✦  ✧  ✦</span>
+            </div>
+          </div>
+          <span class="art-spark spark-one">✦</span>
+          <span class="art-spark spark-two">✧</span>
+        </div>
+      </section>
+
+      <section class="setup-panel" aria-labelledby="setup-title">
+        <div class="section-heading">
+          <div>
+            <p class="step-label">الخطوة الأولى <span>01</span></p>
+            <h2 id="setup-title">اختر مجال الاختبار</h2>
+          </div>
+          <p class="heading-hint">يمكنك تغيير الاختيارات قبل البدء</p>
+        </div>
+
+        <div class="category-grid" role="group" aria-label="مجالات الاختبار">
+          <button class="category-card active" data-category="quran" type="button">
+            <span class="category-icon quran-icon">۞</span>
+            <span class="category-content"><strong>القرآن الكريم</strong><small>تفسير وعلوم القرآن</small></span>
+            <span class="checkmark">✓</span>
+          </button>
+          <button class="category-card" data-category="seerah" type="button">
+            <span class="category-icon seerah-icon">ﷺ</span>
+            <span class="category-content"><strong>السيرة النبوية</strong><small>مواقف من حياة النبي</small></span>
+            <span class="checkmark">✓</span>
+          </button>
+          <button class="category-card" data-category="aqeedah" type="button">
+            <span class="category-icon aqeedah-icon">◈</span>
+            <span class="category-content"><strong>العقيدة</strong><small>أصول الإيمان والتوحيد</small></span>
+            <span class="checkmark">✓</span>
+          </button>
+        </div>
+
+        <div class="level-heading">
+          <div>
+            <p class="step-label">الخطوة الثانية <span>02</span></p>
+            <h2>حدّد مستوى التحدي</h2>
+          </div>
+          <p class="level-value" id="level-description">مناسب للمبتدئين</p>
+        </div>
+        <div class="level-picker" role="group" aria-label="مستوى الاختبار">
+          <button class="level-option active" data-level="easy" type="button"><span class="level-dot"></span><strong>مبتدئ</strong><small>بداية موفقة</small></button>
+          <button class="level-option" data-level="medium" type="button"><span class="level-dot"></span><strong>متوسط</strong><small>خطوة أبعد</small></button>
+          <button class="level-option" data-level="hard" type="button"><span class="level-dot"></span><strong>متقدم</strong><small>لأهل التحدي</small></button>
+        </div>
+        <button class="start-button" id="start-button" type="button">ابدأ الاختبار <span>←</span></button>
+      </section>
+
+      <section class="quiz-view hidden" id="quiz-view" aria-live="polite">
+        <div class="quiz-topline">
+          <button class="back-button" id="quit-button" type="button">← <span>العودة للاختيارات</span></button>
+          <span class="quiz-category" id="quiz-category">القرآن الكريم</span>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-label"><span>السؤال <b id="question-number">1</b> من <b id="question-total">7</b></span><span id="progress-percent">14%</span></div>
+          <div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div>
+        </div>
+        <article class="question-card">
+          <div class="question-badge">سؤال <span id="badge-number">01</span></div>
+          <h2 id="question-text"></h2>
+          <div class="answers" id="answers"></div>
+          <div class="question-footer">
+            <span class="feedback" id="feedback" role="status"></span>
+            <button class="next-button" id="next-button" type="button" disabled>التالي <span>←</span></button>
+          </div>
+        </article>
+      </section>
+
+      <section class="result-view hidden" id="result-view" aria-live="polite">
+        <div class="result-card">
+          <div class="result-symbol">✦</div>
+          <p class="eyebrow">أحسنت، انتهى الاختبار</p>
+          <h2 id="result-title">رحلة موفقة!</h2>
+          <p class="result-subtitle" id="result-subtitle">كل سؤال أجبت عنه هو خطوة جديدة في طريق المعرفة.</p>
+          <div class="score-circle"><strong id="score-value">0</strong><span>من <b id="score-total">5</b></span></div>
+          <div class="result-stats"><div><strong id="correct-count">0</strong><span>إجابة صحيحة</span></div><div><strong id="result-level">مبتدئ</strong><span>المستوى</span></div><div><strong id="result-category">القرآن</strong><span>المجال</span></div></div>
+          <button class="start-button" id="retry-button" type="button">أعد الاختبار <span>↻</span></button>
+          <button class="text-button" id="new-quiz-button" type="button">اختر مجالاً آخر</button>
+        </div>
+      </section>
+    </main>
+
+    <footer><span>زاد</span> · المعرفة نور يُسار إليه</footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
